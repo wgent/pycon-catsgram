@@ -1,0 +1,11 @@
+user=1;kind=a;action=show
+user=1;kind=a;action=show
+user=1;kind=a;action=like
+user=2;kind=a;action=show
+user=2;kind=a;action=like
+user=3;kind=a;action=show
+user=3;kind=a;action=like
+user=3;kind=b;action=show
+user=3;kind=b;action=like
+user=4;kind=b;action=show
+user=4;kind=b;action=like
