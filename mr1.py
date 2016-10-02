@@ -4,13 +4,17 @@ import os
 MR_DIR = 'mr/'
 
 
-def run_map(map_func, input_tables, output_table):
+def run_map(map_func,
+            input_tables, output_table):
     pass
 
-def run_reduce(reduce_func, input_tables, output_table, reduce_by):
+def run_reduce(reduce_func,
+               input_tables, output_table,
+               reduce_by):
     pass
 
-def run_sort(input_tables, out_table, sort_by, desc=False):
+def run_sort(input_tables, out_table,
+             sort_by, desc=False):
     pass
 
 
