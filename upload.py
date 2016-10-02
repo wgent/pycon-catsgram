@@ -42,14 +42,14 @@ class CatsReport(luigi.Task):
         mr.mkdir(report_dir)
 
         cats_stats_table = '%s/cats/popularity3' % self.date
-        mr.run_sort(cats_stats_table, report_dir + 'cats', sort_by='count', desc=True)
+        mr.run_sort(cats_stats_table, report_dir + 'cats_sorted', sort_by='count', desc=True)
 
-        top_10_cats = [r['kind'] for r in mr.read_table(report_dir + 'cats')][-10:]
+        top_3_cats = [r['kind'] for r in mr.read_table(report_dir + 'cats_sorted')][:3]
 
         time.sleep(5)
-        top_10_cats_recs = [{'kind': k, 'rating': len(top_10_cats) - idx}
-                            for idx, k in enumerate(top_10_cats)]
-        mr.write_table(top_10_cats_recs, report_dir + 'report')
+        top_3_cats_recs = [{'kind': k, 'rating': idx + 1}
+                            for idx, k in enumerate(top_3_cats)]
+        mr.write_table(top_3_cats_recs, report_dir + 'report')
 
     def output(self):
         return [mr.MrTarget('%s/report/report' % self.date)]

@@ -34,7 +34,7 @@ def run_reduce(reduce_func, input_tables, output_table, reduce_by):
 
 
 def run_sort(input_tables, out_table, sort_by, desc=False):
-    sorted_recs = sorted(_read_tables(input_tables), key=lambda rec: rec[sort_by], reverse=desc)
+    sorted_recs = sorted(_read_tables(input_tables), key=lambda rec: int(rec[sort_by]), reverse=desc)
     write_table(sorted_recs, out_table)
 
 
