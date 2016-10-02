@@ -10,7 +10,6 @@ class ImportCatsLog(luigi.Task):
     date = luigi.Parameter()
 
     def parse_log(self, rec):
-        print(rec)
         if rec['action'] == 'like':
             yield {'user': rec['user'], 'kind': rec['kind']}
 
