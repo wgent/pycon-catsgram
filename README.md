@@ -1,6 +1,9 @@
 # pycon-catsgram
 Демо luigi для PyCon Siberia 2016
 
+Slides:
+http://www.slideshare.net/secret/ET7TZ1SB3gkwAH
+
 Luigi:
 http://luigi.readthedocs.io/en/stable/
 
